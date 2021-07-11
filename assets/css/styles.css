@@ -1,0 +1,225 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Main Wrapper */
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Left Section */
+.detailed-section {
+    flex: 1;
+    background: #ffffff;
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+/* Left Section Top */
+.detailed-section__top {
+    padding: 3rem 2rem 0 2rem;
+}
+
+#weather-img {
+    display: block;
+    width: 30%;
+    margin: 0 auto 1.5rem auto;
+}
+
+#weather-description {
+    color: #686868;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+/* Left Section Bottom */
+.detailed-section__bottom {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #cccccc;
+    margin-top: 5rem;
+    width: 100%;
+    padding: 1rem 4rem;
+}
+
+/* Hourly Forecast Rows */
+.hourly-forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #cccccc;
+}
+
+.hourly-forecast__time {
+    color: #686868;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.hourly-forecast__temp {
+    display: flex;
+    align-items: center;
+}
+
+.hourly-forecast__temp .temp-icon {
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+.hourly-forecast__temp .temp-text {
+    color: #686868;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+/* Right Section */
+.current-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url(../img/background.jpg) center center/cover;
+    padding: 3rem;
+}
+
+/* Right Section Top */
+.current-section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: .1rem;
+}
+
+/* Searchbox */
+#searchbox {
+    display: block;
+    padding: 1.25rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+#searchbox:hover {
+    background-color: rgb(255, 255, 255);
+    transition: background-color .3s ease;
+}
+
+#searchbox:focus {
+    cursor: text;
+}
+
+.current-section__top #city {
+    color: #ffffff;
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.current-section__top #country {
+    color: #cccccc;
+    font-size: 3rem;
+}
+
+/* Right Section Bottom */
+.current-section__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.current-section__bottom .bottom__left {
+    text-align: left;
+}
+
+#current-time {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+#current-date {
+    color: #cccccc;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#current-temperature {
+    color: #ffffff;
+    font-size: 17rem;
+    font-weight: 100;
+}
+
+@media (max-width: 900px) {
+    /* Main Wrapper */
+    .main-wrapper {
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+
+    /* Right Section */
+    .current-section {
+        text-align: left;
+    }
+    
+    /* Right Section Top */
+    .current-section__top {
+        flex-direction: column;
+    }
+
+    /* Searchbox */
+    #searchbox {
+        margin: 1rem 0;
+    }
+
+    .top__location-information {
+        margin: 3rem 0;
+    }
+
+    .current-section__top #city {
+        font-size: 4rem;
+    }
+
+    .current-section__top #country {
+        font-size: 2.5rem;
+    }
+
+    /* Right Section Bottom */
+    #current-date {
+        font-size: 2rem;
+    }
+
+    #current-temperature {
+        font-size: 10rem;
+    }
+    
+    /* Left Section Top */
+    #weather-img {
+        width: 25%;
+    }
+
+    #weather-description {
+        font-size: 2.75rem;
+    }
+}
