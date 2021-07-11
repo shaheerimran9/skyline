@@ -15,7 +15,7 @@
         <section class="detailed-section">
             <div class="detailed-section__top">
                 <img src="/assets/img/sunshine.svg" alt="sun-icon" id="weather-img">
-                <h3 id="weather-description">Sun Shine</h3>
+                <h3 id="weather-description">Sunshine</h3>
             </div>
             <div class="detailed-section__bottom">
                 <div class="hourly-forecast">
@@ -26,28 +26,28 @@
                     </div>
                 </div>
                 <div class="hourly-forecast">
-                    <h3 class="hourly-forecast__time">Now</h3>
+                    <h3 class="hourly-forecast__time">12:00</h3>
                     <div class="hourly-forecast__temp">
                         <img src="./assets/img/sunshine.svg" alt="sunshine" class="temp-icon">
                         <h3 class="temp-text">65°</h3>
                     </div>
                 </div>
                 <div class="hourly-forecast">
-                    <h3 class="hourly-forecast__time">Now</h3>
+                    <h3 class="hourly-forecast__time">3:00</h3>
                     <div class="hourly-forecast__temp">
                         <img src="./assets/img/sunshine.svg" alt="sunshine" class="temp-icon">
                         <h3 class="temp-text">65°</h3>
                     </div>
                 </div>
                 <div class="hourly-forecast">
-                    <h3 class="hourly-forecast__time">Now</h3>
+                    <h3 class="hourly-forecast__time">6:00</h3>
                     <div class="hourly-forecast__temp">
                         <img src="./assets/img/sunshine.svg" alt="sunshine" class="temp-icon">
                         <h3 class="temp-text">65°</h3>
                     </div>
                 </div>
                 <div class="hourly-forecast">
-                    <h3 class="hourly-forecast__time">Now</h3>
+                    <h3 class="hourly-forecast__time">9:00</h3>
                     <div class="hourly-forecast__temp">
                         <img src="./assets/img/sunshine.svg" alt="sunshine" class="temp-icon">
                         <h3 class="temp-text">65°</h3>
@@ -57,7 +57,9 @@
         </section>
         <section class="current-section">
             <div class="current-section__top">
-                <input type="text" placeholder="Search for a location" id="searchbox">
+                <form id="form">
+                    <input type="text" placeholder="Search for a location" id="searchbox">
+                </form>
                 <div class="top__location-information">
                     <h1 id="city">Richmond</h1>
                     <h2 id="country">US</h2>
@@ -74,5 +76,8 @@
             </div>
         </section>
     </div>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
