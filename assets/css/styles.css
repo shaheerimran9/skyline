@@ -18,77 +18,7 @@ html {
     position: relative;
 }
 
-/* Left Section */
-.detailed-section {
-    flex: 1;
-    background: #ffffff;
-    max-height: 100vh;
-    overflow: scroll;
-}
-
-/* Left Section Top */
-.detailed-section__top {
-    padding: 3rem 2rem 0 2rem;
-}
-
-#weather-img {
-    display: block;
-    width: 30%;
-    margin: 0 auto 1.5rem auto;
-}
-
-#weather-description {
-    color: #686868;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 500;
-    letter-spacing: .1rem;
-}
-
-/* Left Section Bottom */
-.detailed-section__bottom {
-    display: flex;
-    flex-direction: column;
-    border-top: 2px solid #cccccc;
-    margin-top: 5rem;
-    width: 100%;
-    padding: 1rem 4rem;
-}
-
-/* Hourly Forecast Rows */
-.hourly-forecast {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.5rem 0;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #cccccc;
-}
-
-.hourly-forecast__time {
-    color: #686868;
-    font-size: 1.75rem;
-    font-weight: 500;
-    margin-right: 1rem;
-}
-
-.hourly-forecast__temp {
-    display: flex;
-    align-items: center;
-}
-
-.hourly-forecast__temp .temp-icon {
-    width: 5rem;
-    margin-right: 1rem;
-}
-
-.hourly-forecast__temp .temp-text {
-    color: #686868;
-    font-size: 1.75rem;
-    font-weight: 500;
-}
-
-/* Right Section */
+/* Current Section */
 .current-section {
     flex: 2;
     display: flex;
@@ -100,7 +30,7 @@ html {
     padding: 3rem;
 }
 
-/* Right Section Top */
+/* Current Section Top */
 .current-section__top {
     display: flex;
     justify-content: space-between;
@@ -178,12 +108,12 @@ html {
         overflow: hidden;
     }
 
-    /* Right Section */
+    /* Current Section */
     .current-section {
         text-align: left;
     }
     
-    /* Right Section Top */
+    /* Current Section Top */
     .current-section__top {
         flex-direction: column;
     }
@@ -205,21 +135,12 @@ html {
         font-size: 2.5rem;
     }
 
-    /* Right Section Bottom */
+    /* Current Section Bottom */
     #current-date {
         font-size: 2rem;
     }
 
     #current-temperature {
         font-size: 10rem;
-    }
-    
-    /* Left Section Top */
-    #weather-img {
-        width: 25%;
-    }
-
-    #weather-description {
-        font-size: 2.75rem;
     }
 }

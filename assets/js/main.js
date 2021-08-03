@@ -5,9 +5,6 @@ const searchbox = document.querySelector('#searchbox');
 const currentTemperature = document.querySelector('#current-temperature');
 const currentTime = document.querySelector('#current-time');
 const currentDate = document.querySelector('#current-date');
-const currentWeatherIcon = document.querySelector('#weather-img');
-const currentWeatherDescription = document.querySelector('#weather-description');
-const hourlyWeatherWrapper = document.querySelector('.detailed-section__bottom');
 
 const setTimeDate = (timezone) => {
     const timezoneInMins = timezone / 60;
@@ -17,27 +14,6 @@ const setTimeDate = (timezone) => {
     }
     return timeDateObj;
 }
-
-const hourlyForcastBuilder = (data) => {
-    const hourlyForecast = document.createElement('div');
-    const time = document.createElement('h3');
-    const tempWrapper = document.createElement('div');
-    const icon = document.createElement('img');
-    const temperature = document.createElement('h3');
-    hourlyForecast.classList.add('hourly-forecast');
-    time.classList.add('hourly-forecast__time');
-    tempWrapper.classList.add('hourly-forecast__temp');
-    icon.classList.add('temp-icon');
-    temperature.classList.add('temp-text');
-
-    tempWrapper.append(icon, temperature);
-    hourlyForecast.append(time,tempWrapper);
-
-    time.textContent = `${dayjs.unix(data.dt).$H}:${dayjs.unix(data.dt).$m}0`;
-    icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    temperature.textContent = `${data.main.temp.toFixed(0)}°`;
-    hourlyWeatherWrapper.appendChild(hourlyForecast);
-};
 
 const fetchWeather = async (query) => {
     try {
@@ -60,14 +36,7 @@ form.addEventListener('submit', (e) => {
             currentTemperature.textContent = `${weatherData.list[0].main.temp.toFixed(0)}°`;
             currentTime.textContent = `${setTimeDate(weatherData.city.timezone).time}`;
             currentDate.textContent = `${setTimeDate(weatherData.city.timezone).date}`;
-            currentWeatherIcon.src = `http://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`
-            currentWeatherDescription.textContent = `${weatherData.list[0].weather[0].description}`
-    
-            hourlyWeatherWrapper.innerHTML = "";
-    
-            weatherData.list.forEach(item => {
-                hourlyForcastBuilder(item);
-            });
+
         } else {
             alert("Please enter a valid city.");
         }
